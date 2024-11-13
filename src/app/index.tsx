@@ -67,6 +67,7 @@ export default function Index() {
   async function remove(id: number) {
     try {
       await productDatabase.remove(id)
+      Alert.alert("Produto Removido com Sucesso!")
       await list()
     } catch (error) {
       console.log(error)
